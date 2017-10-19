@@ -3,12 +3,17 @@ const input = document.getElementById('foodquest');
 const ul = document.getElementById('foodList');
 const shoppinglist = document.getElementById('shoppingList');
 let text = '';
+const calcNutritionButton = document.getElementById('calcNutrition');
 
 
 console.log(registrar);
 
 let rawFoodData = [];
 let nutritionData = [];
+
+function calcNutritionFunc(data) {
+	
+}
 
 function createLI(text) {
 	const li = document.createElement('li');
@@ -80,6 +85,191 @@ function getMeasures(index) {
 	console.log(labelsArr);
 }
 
+
+const daily_nutrition = {
+	"dvs": [
+		{
+			"name": "total_fat",
+			"uom": "g",
+			"dv": 65,
+			"nutrient_id": 204
+		},
+		{
+			"name": "saturated_fat",
+			"uom": "g",
+			"dv": 20,
+			"nutrient_id": 606
+		},
+		{
+			"name": "cholesterol",
+			"uom": "mg",
+			"dv": 300,
+			"nutrient_id": 601 
+		},
+		{
+			"name": "sodium",
+			"uom": "mg",
+			"dv": 2400,
+			"nutrient_id": 307 
+		},
+		{
+			"name": "potassium",
+			"uom": "mg",
+			"dv": 3500,
+			"nutrient_id": 306  
+		},
+		{
+			"name": "total_carbs",
+			"uom": "g",
+			"dv": 300,
+			"nutrient_id": 205 
+		},
+		{
+			"name": "fiber",
+			"uom": "g",
+			"dv": 25,
+			"nutrient_id": 291  
+		},
+		{
+			"name": "protein",
+			"uom": "g",
+			"dv": 50,
+			"nutrient_id": 203  
+		},
+		{
+			"name": "vitamin_a",
+			"uom": "iu",
+			"dv": 5000,
+			"nutrient_id": 318 
+		},
+		{
+			"name": "vitamin_c",
+			"uom": "mg",
+			"dv": 60,
+			"nutrient_id": 401 
+		},
+		{
+			"name": "calcium",
+			"uom": "mg",
+			"dv": 1000,
+			"nutrient_id": 301 
+		},
+		{
+			"name": "iron",
+			"uom": "mg",
+			"dv": 18,
+			"nutrient_id": 303 
+		},
+		{
+			"name": "vitamin_d",
+			"uom": "iu",
+			"dv": 400,
+			"nutrient_id": 324 
+		},
+		{
+			"name": "vitamin_e",
+			"uom": "iu",
+			"dv": 30,
+			"nutrient_id": 323  
+		},
+		{
+			"name": "vitamin_k",
+			"uom": "µg",
+			"dv": 80,
+			"nutrient_id": 430 
+		},
+		{
+			"name": "thiamin",
+			"uom": "mg",
+			"dv": 1.5,
+			"nutrient_id": 404 
+		},
+		{
+			"name": "riboflavin",
+			"uom": "mg",
+			"dv": 1.7,
+			"nutrient_id": 405
+		},
+		{
+			"name": "niacin",
+			"uom": "mg",
+			"dv": 20,
+			"nutrient_id": 406 
+		},
+		{
+			"name": "vitamin_b6",
+			"uom": "mg",
+			"dv": 2,
+			"nutrient_id": 415 
+		},
+		{
+			"name": "folate",
+			"uom": "µg",
+			"dv": 400,
+			"nutrient_id": 417 
+		},
+		{
+			"name": "vitamin_b12",
+			"uom": "µg",
+			"dv": 6,
+			"nutrient_id": 418 
+		},
+		{
+			"name": "biotin",
+			"uom": "µg",
+			"dv": 300,
+			"nutrient_id": 000 
+		},
+		{
+			"name": "pantothenic_acid",
+			"uom": "mg",
+			"dv": 10,
+			"nutrient_id": 410  
+		},
+		{
+			"name": "phosphorus",
+			"uom": "mg",
+			"dv": 1000,
+			"nutrient_id": 305 
+		},
+		{
+			"name": "iodine",
+			"uom": "µg",
+			"dv": 150,
+			"nutrient_id": 000  
+		},
+		{
+			"name": "magnesium",
+			"uom": "mg",
+			"dv": 400,
+			"nutrient_id": 304 
+		},
+		{
+			"name": "zinc",
+			"uom": "mg",
+			"dv": 15,
+			"nutrient_id": 309 
+		},
+		{
+			"name": "selenium",
+			"uom": "µg",
+			"dv": 70,
+			"nutrient_id": 317 
+		},
+		{
+			"name": "copper",
+			"uom": "mg",
+			"dv": 2,
+			"nutrient_id": 312
+		},
+		{
+			"name": "manganese",
+			"uom": "mg",
+			"dv": 2,
+			"nutrient_id": 304 
+		}
+	]
+};
 
 
 
