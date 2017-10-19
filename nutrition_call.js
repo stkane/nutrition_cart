@@ -10,9 +10,16 @@ console.log(registrar);
 
 let rawFoodData = [];
 let nutritionData = [];
+let processedNutritionData = [];
+
+calcNutritionButton.addEventListener('click', (e) => {
+	calcNutritionFunc(nutritionData)
+});
 
 function calcNutritionFunc(data) {
-	
+	for(let i = 0; i < nutritionData.length; i++) {
+		nutrient_id = nutrientData[i].nutrients
+	}
 }
 
 function createLI(text) {
@@ -53,11 +60,12 @@ function ndInfo(input) {
 // }
 
 function apiCall(qText) {
-	d3.json(`https://api.nal.usda.gov/ndb/search/?format=json&q=${qText}&sort=n&ds=Standard%20Reference&offset=0&api_key=DEMO_KEY`, function(data){
+	d3.json(`https://api.nal.usda.gov/ndb/search/?format=json&q=${qText}&sort=r&ds=Standard%20Reference&offset=0&api_key=DEMO_KEY`, function(data){
 	    responseArr = data.list.item;
+	    
 	    qMatchable = qText.toLowerCase() + ',';
 	    for(let i = 0; i < 6; i++) {
-	    	rawFoodData[i] = new ndInfo(data.list.item[i]);
+	    	rawFoodData[i] = new ndInfo(responseArr[i]);
 	    };    
 		for(let i = 0; i < rawFoodData.length; i++) {
 			const li = createLI(rawFoodData[i].name);
