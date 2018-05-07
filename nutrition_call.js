@@ -6,6 +6,7 @@ let text = '';
 const calcNutritionButton = document.getElementById('calcNutrition');
 
 
+
 console.log(registrar);
 
 let rawFoodData = [];
@@ -17,9 +18,16 @@ calcNutritionButton.addEventListener('click', (e) => {
 });
 
 function calcNutritionFunc(data) {
-	for(let i = 0; i < nutritionData.length; i++) {
-		nutrient_id = nutrientData[i].nutrients
-	}
+	daily_nutrition_totals = daily_nutrition;
+	for(let i = 0; i < daily_nutrition_totals.length; i++) {
+		nutrient_id_local = daily_nutrition_totals.dvs[i].nutrient_id;
+		for (let j = 0; j < nutritionData.length; j++) {
+			food_nutrients = nutritionData[j].nutrients;
+		}
+			for (let k = 0; k < food_nutrients.length; k++) {
+				
+			};
+	};
 }
 
 function createLI(text) {
